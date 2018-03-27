@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+  "name": "Channeler",
+  "version": "1.0",
+  "icons":{
+    "128": "i128.png",
+    "48": "i48.png",
+    "16": "i16.png"
+  },
+  "browser_action":{
+    "default_popup": "popup.html",
+    "default_title": "Channeler",
+    "default_icon": "i16.png"
+  },
+  "background":{
+    "scripts": ["eventPage.js"],
+    "persistent": true
+  },
+  "permissions": [
+    "tabs",
+    "http://localhost:3000/*"
+  ]
+}

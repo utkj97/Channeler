@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Channeler</title>
+    <script src="angular.min.js"></script>
+    <script src="popup.js"></script>
+    <link rel="stylesheet" href="/styles/popup.css">
+  </head>
+  <body ng-app="channels_list" ng-controller="myCtrl" ng-init="onLoad()">
+  <div class="heading">
+    <h1>Channeler</h1>
+  </div>
+    <h3 class="avl" ng-bind="heading"></h3>
+    <hr>
+
+    <ul id="channels">
+      <li ng-repeat="x in channel_list" ng-if="x.name==current||current==''">
+        <div  class = "list-items1">{{x.name}}</div>
+
+        <div  class = "div-btn">
+          <input type="button" class="btn1" ng-click="showList(x.name)" ng-show="current != x.name" value="view">
+          <input type="button" value="hide" class="btn1" ng-hide="x.name != current" ng-click="hideList(x.name)" />
+        </div>
+
+        <ul ng-if="x.name == current" class="url-list">
+          <li ng-repeat="p in x.list">
+            <span class= "list-items2"><a href="#" ng-click="openTab(p.url)">{{p.url}}</a></span>
+
+            <span class= "list-text">{{p.text}}</span>
+            <span ><input type="button" class="btn2" style="height:20px;float: right;" ng-click="deleteUrl(p)" value="-" /></span>
+
+          </li>
+        </ul>
+        <br>
+        <div >
+          <textarea class="newentry" id="entry" row= "4" cols="28" type="text" placeholder="Enter text here" ng-hide="x.name != current" ng-model="siteText" / >
+          </textarea>
+          <input type="submit" value="add" class="btn1" ng-hide="x.name != current" ng-click="addWebsite(x.name)" />
+        </div>
+
+        <br />
+      </li>
+    </ul>
+
+    <hr>
+    <h3 class="avl">Create new Channel</h3>
+    <div class="bottom-field">
+      <input type="text" id="newChannel" placeholder="Enter Channel name" ng-model="newChannel"/>
+      <input type="submit" id="submitChannel" value="submit" ng-click="addChannel()" class="btn1" />
+    </div>
+
+  </body>
+</html>

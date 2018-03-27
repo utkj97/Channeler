@@ -1,0 +1,167 @@
+body{
+  height: 400px;
+  width: 350px;
+  overflow: auto;
+}
+
+hr{
+  display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #2a8bcc;
+    margin: 1em 0;
+    padding: 0;
+}
+#channels{
+  list-style: none;
+}
+
+#newChannel{
+  width: 280px;
+}
+
+.newentry{
+  left: 0;
+  line-height: 1.3em;
+  max-width: 444px;
+  word-wrap: break-word;
+}
+
+.avl{
+  text-align: center;
+  color: #339966;
+}
+
+.heading{
+  max-width:100%;
+  max-height: 50px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 2px 2px;
+  border-bottom: 4px solid #2a8bcc;
+  text-decoration: none;
+  background-color: #333;
+  border-radius: 2px;
+}
+
+.list-items1{
+  font-size: 14px;
+
+}
+.list-items1, .div-btn{
+  display: inline;
+  line-height: 1.3em;
+}
+
+
+.btn-hide{
+  display:hidden;
+}
+
+.btn1{
+  position: absolute;
+  right: 10px;
+  padding: 2px;
+  width: 60px;
+  height: 23px;
+  background: #333;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  border: 0;
+  border-bottom: 2px solid #2a8bcc;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -2px #2a8bcc;
+  box-shadow: inset 0 -2px #2a8bcc;
+  border-radius: 5px;
+}
+
+.btn2{
+  position: absolute;
+  right: 1px;
+  padding: 2px;
+  width: 20px;
+  height: 25px;
+  background: #333;
+  color: white;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  border: 0;
+  border-bottom: 1px solid #2a8bcc;
+  cursor: pointer;
+  -webkit-box-shadow: inset 0 -2px #2a8bcc;
+  box-shadow: inset 0 -2px #2a8bcc;
+  border-radius: 3px;
+}
+
+/*#CSS for the list of urls in a channel*/
+ul.url-list {
+  font-family: monospace;
+  font-size: 1.3em;
+  list-style: none;
+  margin: 1em;
+  padding: 0;
+}
+ul.url-list li {
+  margin: 0;
+  margin-bottom: 1em;
+  padding-left: 0.5em;
+  position: relative;
+  overflow:hidden;
+}
+ul.url-list li:before {
+  content: "";
+  height: 0.4em;
+  width: 0.4em;
+  background: #2d8659;
+  display: block;
+  position: absolute;
+  transform: rotate(45deg);
+  top: 0.25em;
+  left: 0;
+}
+ul.url-list li span.list-items2{
+  width:80%;
+  float: left;
+  word-wrap: break-word;
+  display: :block;
+
+}
+
+ul.url-list li span.list-text{
+  float:left;
+  min-width: 140px;
+  word-wrap: break-word;
+}
+
+.bottom-field{
+  margin-bottom: 1em;
+}
+
+
+/*CSS for links*/
+a:link    {
+  /* Applies to all unvisited links */
+  text-decoration:  none;
+  font-weight:      bold;
+  color:            #2d8659;
+  }
+a:visited {
+  /* Applies to all visited links */
+  text-decoration:  none;
+  font-weight:      bold;
+  color:            #f0f;
+  }
+a:hover   {
+  /* Applies to links under the pointer */
+  text-decoration:  underline;
+  font-weight:      bold;
+  color:            #339966;
+  }
+a:active  {
+  /* Applies to activated links */
+  text-decoration:  underline;
+  font-weight:      bold;
+  color:            #2a8bcc;
+  }
